@@ -1,8 +1,8 @@
 # CyberDefenders Microsoft Cloud Investigations Writeups
 
-A structured series of CyberDefenders (BlueYard) Microsoft Cloud forensics and threat hunting challenges focused on isolating identity breaches, privilege escalation, and hybrid cloud compromise. Designed around real-world SOC workflows, each project documents the analytical process required to identify, investigate, and scope security events through timeline reconstruction, Kusto Query Language (KQL) analysis, and MITRE ATT&CK mapping.
+### A structured series of CyberDefenders Premium (BlueYard) Microsoft Cloud forensics and threat hunting challenges focused on isolating identity breaches, privilege escalation, and hybrid cloud compromise. Designed around real-world SOC workflows, each project documents the analytical process required to identify, investigate, and scope security events through timeline reconstruction, Kusto Query Language (KQL) analysis, and MITRE ATT&CK mapping.
 
-Topics span identity-based attacks, service principal abuse, and developer perimeter compromise. Investigations leverage Microsoft 365 Unified Audit Logs (UAL), Entra ID telemetry, and Azure Activity Logs to trace attack vectors across the Microsoft stack, including password spraying, Entra ID privilege escalation, and multi-region cloud pivoting.
+## Topics span identity-based attacks, service principal abuse, and developer perimeter compromise. Investigations leverage Microsoft 365 Unified Audit Logs (UAL), Entra ID telemetry, and Azure Activity Logs to trace attack vectors across the Microsoft stack, including password spraying, Entra ID privilege escalation, and multi-region cloud pivoting.
 
 ---
 
