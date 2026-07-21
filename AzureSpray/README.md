@@ -80,6 +80,7 @@ Outputting the whole table, we see the "ResultType" column, so we can query for 
 ![1.1](screenshots/1.1.1.png)
 
 We see the most frequent result type is 50126 by far
+
 **Answer: 50126**
 
 <br>
