@@ -6,7 +6,7 @@
 
 <br>
 
-### Methodology
+### Methodology:
 
 **Our task is to investigate these authentication anomalies, implement detection mechanisms, and harden the Azure AD environment.**
 
@@ -14,25 +14,25 @@
 
 <br>
 
-### Attack Chain
+### Attack Chain:
 
 ---
 
 <br>
 
-## Indicators of Compromise
+## Indicators of Compromise:
 
 ---
 
 <br>
 
-## MITRE ATT&CK Mapping
+## MITRE ATT&CK Mapping:
 
 ---
 
 <br>
 
-# Investigation
+# Investigation:
 
 ## 1. Initial Attack Detection
 
