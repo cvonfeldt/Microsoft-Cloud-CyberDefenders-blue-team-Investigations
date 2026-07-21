@@ -10,7 +10,7 @@
 
 | # | Investigation | Platform | Focus | Status |
 |---|--------------|----------|-------|--------|
-| 01 | AzureSpray | CyberDefenders | Azure AD Sign-in Logs, Sentinel Analytics, Password Spraying, Smart Lockout bypass | Planned |
+| 01 | AzureSpray | CyberDefenders | Azure AD Sign-in Logs, Sentinel Analytics, Password Spraying, Smart Lockout bypass | In Progress |
 | 02 | DynamicEscalate | CyberDefenders | M365 UAL, Exchange Message Traces, Entra ID Privilege Escalation, KQL | Planned |
 | 03 | Rogue Azure | CyberDefenders | Entra ID, Azure Storage Blobs, Service Principal abuse, Data exfiltration, KQL | Planned |
 | 04 | CursorJack | CyberDefenders | Hybrid Forensics, MCP/Deeplink abuse, Developer workstation compromise, Multi-region pivoting | Planned |
