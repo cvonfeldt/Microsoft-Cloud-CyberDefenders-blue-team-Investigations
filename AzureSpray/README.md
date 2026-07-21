@@ -38,31 +38,45 @@
 
 ### 1.1) During the initial investigation, you notice a pattern of failed authentication attempts. What is the most common Result Type associated with password spray attacks in Azure AD sign-in logs?
 
-**Answer:**
+![1.1](screenshots/1.1.0.png)
+
+![1.1](screenshots/1.1.1.png)
+
+**Answer: 50126**
 
 <br>
 
 ### 1.2) Analyzing the sign-in logs, you identify multiple source IP addresses attempting authentication. Which IP address had the highest number of failed login attempts during the attack window?
 
-**Answer:**
+![1.2](screenshots/1.2.0.png)
+
+![1.2](screenshots/1.2.1.png)
+
+**Answer: 3.123.15.9**
 
 <br>
 
 ### 1.3) The attacker appears to be using a specific user agent string across all spray attempts. What is the user agent string identified in the attack?
 
-**Answer:**
+![1.3](screenshots/1.3.0.png)
+
+**Answer: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36**
 
 <br>
 
 ### 1.4) Smart Lockout events are crucial for identifying password spray victims. What is the specific sign-in error code that indicates an account has been locked out by Azure AD Smart Lockout?
 
-**Answer:**
+reference 1.1
+
+**Answer: 50126**
 
 <br>
 
 ### 1.5) What time (UTC) in CreatedDateTime did the password spray attack begin based on the first failed authentication attempt?
 
-**Answer:**
+![1.5](screenshots/1.5.0.png)
+
+**Answer: 2025-06-29 18:35**
 
 ---
 
@@ -72,13 +86,19 @@
 
 ### 2.1) How many unique user accounts in the Compliant Secure company were targeted in this password spray attack?
 
-**Answer:**
+![2.1](screenshots/2.1.0.png)
+
+![2.1](screenshots/2.1.1.png)
+
+**Answer: 89**
 
 <br>
 
 ### 2.2) The attack originated from a single country. What is the name of the region where the attack originated?
 
-**Answer:**
+![2.2](screenshots/2.2.0.png)
+
+**Answer: DE**
 
 ---
 
@@ -88,35 +108,47 @@
 
 ### 3.1) Detection in Microsoft Sentinel relies on analytics rules that continuously monitor logs for suspicious patterns. To investigate this attack: In Microsoft Sentinel, navigate to Content Hub and install the Microsoft Entra ID solution. Once installed, go to Analytics > Rule templates and you'll see several analytics rules related to password spray attacks. What is the name of the analytics rule that identifies evidence of failures from multiple accounts against Microsoft Entra ID applications?
 
-**Answer:**
+![3.1](screenshots/3.1.0.png)
+
+![3.1](screenshots/3.1.1.png)
+
+**Answer: Password spray attack against Microsoft Entra ID application**
 
 <br>
 
 ### 3.2) Create an analytics rule based on the template from the previous question, but modify it to use the "SigninLogs_CL" custom table and update all column references to match the custom table schema. In the rule configuration, there's a parameter called authenticationThreshold that defines how many failed account attempts from a single IP address trigger an alert. Based on the attack patterns observed in this incident, what is the maximum value you should set for authenticationThreshold to ensure the rule would have detected this specific attack?
 
+![3.2](screenshots/3.2.0.png)
 
-**Answer:**
+![3.2](screenshots/3.2.1.png)
+
+**Answer: 3**
 
 <br>
 
 ### 3.3) The analytics rule you created to detect the attack patterns by analyzing failed authentication attempts over specific time periods. Review the KQL query in your analytics rule and locate the parameter that defines the time window for grouping authentication attempts. What is the value (in minutes) set for the authenticationWindow parameter?
 
+![3.3](screenshots/3.3.0.png)
 
-**Answer:**
+**Answer: 20**
 
 <br>
 
 ### 3.4) After creating and enabling your custom analytics rule using SignInLogs only, it successfully triggers and generates an incident for the attack that happened. Navigate to Incidents in Microsoft Sentinel and open the newly created incident. Review the entities section, which shows all IP addresses involved in this attack. List all attacker IP addresses identified in the incident.
 
+![3.4](screenshots/3.4.0.png)
 
-**Answer:**
+**Answer: 3.123.14.162, 3.123.14.126, 3.70.195.178**
 
 <br>
 
 ### 3.5) What is the minimum number of failed attempts from a single IP before Smart Lockout triggers for an unfamiliar location (based on default settings)?
 
+Quick lookup
 
-**Answer:**
+![3.5](screenshots/3.5.0.png)
+
+**Answer: 10**
 
 ---
 
@@ -126,8 +158,9 @@
 
 ### 4.1) Investigation revealed that despite the widespread attack, only one account was successfully compromised. What is the user principal name of the account that was successfully breached?
 
+![4.1](screenshots/4.1.0.png)
 
-**Answer:**
+**Answer: louisa.hartis@compliantsecure.store**
 
 ---
 
@@ -137,19 +170,27 @@
 
 ### 5.1) What Conditional Access policy would have prevented 99% of this password spray attack according to Microsoft's research?
 
-**Answer:**
+Quick lookup
+
+![5.1](screenshots/5.1.0.png)
+
+**Answer: Block legacy authentication**
 
 <br>
 
 ### 5.2) When implementing Azure AD Password Protection to prevent compromised accounts, what is the maximum number of password entries you can add to the custom banned password list?
 
-**Answer:**
+![5.2](screenshots/5.2.0.png)
+
+**Answer: 1000**
 
 <br>
 
 ### 5.3) For federated environments, what Windows Server 2019 feature provides similar protection to Azure AD Smart Lockout?
 
-**Answer:**
+![5.3](screenshots/5.3.0.png)
+
+**Answer: Extranet Smart Lockout**
 
 <br>
 
@@ -165,4 +206,6 @@
 
 ---
 
-## Completed
+**Completed:**
+
+![done](screenshots/complete.png)
