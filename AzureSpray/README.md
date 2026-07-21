@@ -89,7 +89,11 @@ We see the most frequent result type is 50126 by far
 
 ![1.2](screenshots/1.2.0.png)
 
+Here we see the column named "IPAddress" - we will query this column with failed login attempts ro see which IP had the most:
+
 ![1.2](screenshots/1.2.1.png)
+
+We can see 3.123.15.9 had the most with 6 failed attempts.
 
 **Answer: 3.123.15.9**
 
@@ -97,7 +101,11 @@ We see the most frequent result type is 50126 by far
 
 ### 1.3) The attacker appears to be using a specific user agent string across all spray attempts. What is the user agent string identified in the attack?
 
+Querying for the user agent associated with the spray attempts:
+
 ![1.3](screenshots/1.3.0.png)
+
+We have our answer. 
 
 **Answer: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36**
 
@@ -105,15 +113,19 @@ We see the most frequent result type is 50126 by far
 
 ### 1.4) Smart Lockout events are crucial for identifying password spray victims. What is the specific sign-in error code that indicates an account has been locked out by Azure AD Smart Lockout?
 
-reference 1.1
+We can see in 1.1 that the AD smart lockout resultType code is 50053.
 
-**Answer: 50126**
+**Answer: 50053**
 
 <br>
 
 ### 1.5) What time (UTC) in CreatedDateTime did the password spray attack begin based on the first failed authentication attempt?
 
-![1.5](screenshots/1.5.0.png)
+Querying failed login attempts with CreatedDateTime column sorted from start to finish:
+
+![1.5](screenshots/1.5.1.png)
+
+We see the answer is 6/29/25, 9:52:18:747 AM
 
 **Answer: 2025-06-29 18:35**
 
