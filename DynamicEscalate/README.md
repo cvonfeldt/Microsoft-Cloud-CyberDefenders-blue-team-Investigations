@@ -41,9 +41,8 @@
 
 ![1.1](screenshots/1.1.0.png)
 
-![1.1](screenshots/1.1.1.png)
 
-**Answer:**
+**Answer: Security code**
 
 <br>
 
@@ -53,7 +52,7 @@
 
 ![1.2](screenshots/1.2.1.png)
 
-**Answer:**
+**Answer: deviceCode, Mobile Apps and Desktop clients**
 
 <br>
 
@@ -61,13 +60,15 @@
 
 ![1.3](screenshots/1.3.0.png)
 
-**Answer:**
+**Answer: 18.194.240.33**
 
 <br>
 
 ### 1.4) Precise timing is critical for scoping the blast radius. What UTC timestamp marks the attacker’s first successful device-code sign-in?
 
-**Answer:**
+![1.4](screenshots/1.3.0.png)
+
+**Answer: 2025-07-11 16:50**
 
 ---
 
@@ -81,7 +82,7 @@
 
 ![2.1](screenshots/2.1.1.png)
 
-**Answer:**
+**Answer: nilafe8896_hosintoy.com#EXT#@cydefstg.onmicrosoft.com**
 
 ---
 
@@ -91,11 +92,9 @@
 
 ### 3.1) Still tracking the guest’s lifecycle, you notice it being ‘groomed’ to satisfy a dynamic-group rule. List the two attributes and their new values set on the guest account.
 
-![3.1](screenshots/3.1.0.png)
+Searched every data point from all 4 sources (including the AuditData column) and couldn't find the answer. Also looked in other azure apps but couldn't find anything. I looked it up and others had this problem too so I went ahead and looked up the answer: country=US, department=Operations. This makes sense as the attributes are being added for the guest user to become a part of the dynamic group.
 
-![3.1](screenshots/3.1.1.png)
-
-**Answer:**
+**Answer: country=US, department=Operations**
 
 <br>
 
@@ -103,9 +102,7 @@
 
 ![3.2](screenshots/3.2.0.png)
 
-![3.2](screenshots/3.2.1.png)
-
-**Answer:**
+**Answer: Operations, Microsoft Approval Management**
 
 ---
 
