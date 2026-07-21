@@ -1,4 +1,4 @@
-# CyberDefenders Microsoft Cloud Investigations Writeups
+# Microsoft Cloud Investigations (CyberDefenders) Writeups
 
 ### A structured series of CyberDefenders Premium (BlueYard) Microsoft Cloud forensics and threat hunting challenges focused on isolating identity breaches, privilege escalation, and hybrid cloud compromise. Designed around real-world SOC workflows, each project documents the analytical process required to identify, investigate, and scope security events through timeline reconstruction, Kusto Query Language (KQL) analysis, and MITRE ATT&CK mapping.
 
