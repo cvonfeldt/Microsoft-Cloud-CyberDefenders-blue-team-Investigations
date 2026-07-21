@@ -250,6 +250,8 @@ Quick lookup
 
 ---
 
+<br>
+
 **Completed:**
 
 ![done](screenshots/complete.png)
