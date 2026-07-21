@@ -20,8 +20,6 @@
                                                                 ↓
                                     Failed logins (ResultType 50126) from multiple AWS IP addresses
                                                                 ↓
-                                         Common Chrome 104 user agent across all attempts
-                                                                ↓
                                                Azure AD Smart Lockout events (50053)
                                                                 ↓
                                  Successful authentication of louisa.hartis@compliantsecure.store
@@ -40,6 +38,14 @@
 
 ## Indicators of Compromise:
 
+| Type                 | Indicator                                                                         | Context                                                                     |
+| -------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| IP Address           | 3.123.15.9                                                                        | Primary source IP responsible for highest volume of password spray attempts |
+| IP Addresses         | 3.123.14.162, 3.123.14.126, 3.70.195.178                                          | Attacker infrastructure identified in Microsoft Sentinel incident entities  |
+| User Account         | [louisa.hartis@compliantsecure.store]                                             | Account successfully compromised after password spray attack                |
+| User Agent           | Chrome/104.0.0.0 (Windows NT 10.0)                                                | Static user agent observed across distributed authentication attempts       |
+| Authentication Error | ResultType 50126                                                                  | Invalid credential failures indicating password spray activity              |
+| Authentication Error | ResultType 50053                                                                  | Azure AD Smart Lockout triggered during attack                              |
 
 
 ---
@@ -47,6 +53,15 @@
 <br>
 
 ## MITRE ATT&CK Mapping:
+
+| ATT&CK ID | Technique                                       | Evidence                                                                                                              |
+| --------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| T1110.003 | Brute Force: Password Spraying                  | Attacker attempted authentication against 89 Microsoft Entra ID accounts using invalid credentials (ResultType 50126) |
+| T1078     | Valid Accounts                                  | `louisa.hartis@compliantsecure.store` successfully authenticated after password spray attack                          |
+| T1589.001 | Gather Victim Identity Information: Credentials | Attacker targeted known Microsoft 365 user accounts during password spray campaign                                    |
+| T1071.001 | Application Layer Protocol: Web Protocols       | Authentication attempts performed through Microsoft Entra ID web-based sign-in services                               |
+| T1526     | Cloud Service Discovery                         | Post-compromise access to Microsoft.aadiam indicates potential identity and cloud service reconnaissance              |
+| T1087.004 | Account Discovery: Cloud Account                | Successful access to Azure AD identity services provided opportunity to enumerate cloud accounts and permissions      |
 
 ---
 
