@@ -16,6 +16,25 @@
 
 ### Attack Chain:
 
+                                       Reconnaissance of valid Microsoft 365 user accounts
+                                                               ↓
+                                       Password spray attack launched against 89 user accounts
+                                            (ResultType 50126 - Invalid credentials)
+                                                               ↓
+                                   Authentication attempts distributed across multiple AWS IPs
+                                          (3.123.14.162, 3.123.14.126, 3.70.195.178)
+                                                               ↓
+                                   Azure AD Smart Lockout triggered on targeted victim accounts
+                                                 (ResultType 50053 observed)
+                                                               ↓
+                                  One account successfully authenticated after password spraying
+                                      (louisa.hartis@compliantsecure.store compromised)
+                                                               ↓
+                                Successful Microsoft Entra ID / Azure AD authentication (ResultType 0)
+                                                               ↓
+                                   Attacker gains authenticated access to Microsoft 365 tenant
+                                                               ↓
+                              Opportunity for privilege enumeration, persistence, and lateral movement
 ---
 
 <br>
@@ -40,8 +59,11 @@
 
 ![1.1](screenshots/1.1.0.png)
 
+Outputting the whole table, we see the "ResultType" column, so we can query for the number of distinct result types:
+
 ![1.1](screenshots/1.1.1.png)
 
+We see the most frequent result type is 50126 by far
 **Answer: 50126**
 
 <br>
