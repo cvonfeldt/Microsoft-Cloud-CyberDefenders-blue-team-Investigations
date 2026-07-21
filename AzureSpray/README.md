@@ -16,30 +16,31 @@
 
 ### Attack Chain:
 
-                                       Reconnaissance of valid Microsoft 365 user accounts
-                                                               ↓
-                                       Password spray attack launched against 89 user accounts
-                                            (ResultType 50126 - Invalid credentials)
-                                                               ↓
-                                   Authentication attempts distributed across multiple AWS IPs
-                                          (3.123.14.162, 3.123.14.126, 3.70.195.178)
-                                                               ↓
-                                   Azure AD Smart Lockout triggered on targeted victim accounts
-                                                 (ResultType 50053 observed)
-                                                               ↓
-                                  One account successfully authenticated after password spraying
-                                      (louisa.hartis@compliantsecure.store compromised)
-                                                               ↓
-                                Successful Microsoft Entra ID / Azure AD authentication (ResultType 0)
-                                                               ↓
-                                   Attacker gains authenticated access to Microsoft 365 tenant
-                                                               ↓
-                              Opportunity for privilege enumeration, persistence, and lateral movement
+                                    Password spray against Microsoft Entra ID (89 users targeted)
+                                                                ↓
+                                    Failed logins (ResultType 50126) from multiple AWS IP addresses
+                                                                ↓
+                                         Common Chrome 104 user agent across all attempts
+                                                                ↓
+                                               Azure AD Smart Lockout events (50053)
+                                                                ↓
+                                 Successful authentication of louisa.hartis@compliantsecure.store
+                                                                ↓
+                                            Access to Microsoft.aadiam (Azure AD IAM)
+                                                                ↓
+                                            Authenticated access to Microsoft 365 tenant
+                                                                ↓
+                                              Post-compromise identity reconnaissance
+                                                                ↓
+                                         Potential privilege escalation / lateral movement
+
 ---
 
 <br>
 
 ## Indicators of Compromise:
+
+
 
 ---
 
@@ -183,6 +184,12 @@ Quick lookup
 ![4.1](screenshots/4.1.0.png)
 
 **Answer: louisa.hartis@compliantsecure.store**
+
+### 4.2) Post-compromise analysis shows the attacker accessed specific workloads. Which Microsoft 365 service was accessed first after successful authentication?
+
+![4.2](screenshots/4.2.0.png)
+
+**Answer: Microsoft.aadiam**
 
 ---
 
