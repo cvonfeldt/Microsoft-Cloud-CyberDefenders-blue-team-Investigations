@@ -43,7 +43,7 @@
 
 ![1.1](screenshots/1.1.1.png)
 
-**Answer:**
+**Answer: 52.59.240.166**
 
 <br>
 
@@ -51,9 +51,7 @@
 
 ![1.2](screenshots/1.2.0.png)
 
-![1.2](screenshots/1.2.1.png)
-
-**Answer:**
+**Answer: mharmon@compliantsecure.store**
 
 ---
 
@@ -65,17 +63,13 @@
 
 ![2.1](screenshots/2.1.0.png)
 
-![2.1](screenshots/2.1.1.png)
-
-**Answer:**
+**Answer: 52.221.180.165**
 
 <br>
 
 ### 2.2) From which country did the successful sign-in originate when the attacker pivoted to their secondary infrastructure for post-exploitation activities?
 
-![1.2](screenshots/1.2.0.png)
-
-![1.2](screenshots/1.2.1.png)
+![2.2](screenshots/2.2.0.png)
 
 **Answer:**
 
@@ -89,19 +83,15 @@
 
 ![3.1](screenshots/3.1.0.png)
 
-![3.1](screenshots/3.1.1.png)
-
 **Answer:**
 
 <br>
 
 ### 3.2) The attacker created a second application to ensure persistent access, this one intended to access directory information. What is the name of this second application?
 
-![3.2](screenshots/3.2.0.png)
+See 3.1
 
-![3.2](screenshots/3.2.1.png)
-
-**Answer:**
+**Answer: VaultApp**
 
 ---
 
@@ -115,7 +105,7 @@
 
 ![4.1](screenshots/4.1.1.png)
 
-**Answer:**
+**Answer: lwilliams@compliantsecure.store**
 
 <br>
 
@@ -123,9 +113,7 @@
 
 ![4.2](screenshots/4.2.0.png)
 
-![4.2](screenshots/4.2.1.png)
-
-**Answer:**
+**Answer: Global Administrator**
 
 ---
 
@@ -137,19 +125,15 @@
 
 ![5.1](screenshots/5.1.0.png)
 
-![5.1](screenshots/5.1.1.png)
-
-**Answer:**
+**Answer: mainstoragestore01**
 
 <br>
 
 ### 5.2) The attacker successfully downloaded a sensitive file from the storage account. What is the name of the exfiltrated file?
 
-![5.2](screenshots/5.2.0.png)
+See 5.1
 
-![5.2](screenshots/5.2.1.png)
-
-**Answer:**
+**Answer: Confidintal.png**
 
 ---
 
